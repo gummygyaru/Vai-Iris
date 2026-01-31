@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>404</title>
+</head>
+<body>
+
+<h1>404 - Page Not Found</h1>
+<p>This page does not exist.</p>
+
+<p>Are you an admin trying to fix this page?</p>
+<button onclick="showLogin()">yes</button>
+<button onclick="alert('then go away')">no</button>
+
+<div id="adminLogin" hidden>
+  <p>Admin password:</p>
+  <input type="password" id="adminPass">
+  <button onclick="checkAdmin()">submit</button>
+  <p id="error" hidden>access denied</p>
+</div>
+
+<script>
+function showLogin() {
+  document.getElementById("adminLogin").hidden = false;
+}
+
+function checkAdmin() {
+  const pass = document.getElementById("adminPass").value;
+  if (pass === "HeadShouldersKneesandToes") {
+    window.location.href = "terminal.html";
+  } else {
+    document.getElementById("error").hidden = false;
+  }
+}
+</script>
+
+</body>
+</html>

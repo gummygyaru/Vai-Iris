@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Terminal</title>
+</head>
+<body>
+
+<h1>V&I SYSTEM TERMINAL</h1>
+<p>internal interface only</p>
+
+<textarea id="input" rows="4" cols="60" placeholder=">"></textarea><br>
+<button onclick="run()">execute</button>
+
+<pre id="output"></pre>
+
+<script>
+function run() {
+  const cmd = document.getElementById("input").value.trim().toLowerCase();
+  const out = document.getElementById("output");
+
+  if (cmd === "") {
+    out.textContent = "no input detected.";
+  }
+  else if (cmd === "vai") {
+    out.textContent = "vai status: missing.";
+  }
+  else if (cmd === "iris") {
+    out.textContent = "iris status: active.";
+  }
+  else if (cmd === "vivian lies") {
+    out.textContent = "log fragment recovered:\n'...she said it was just a game...'";
+  }
+  else if (cmd === "joshua") {
+    window.location.href = "joshua_interview.mp3";
+  }
+  else {
+    out.textContent = "command logged.";
+  }
+}
+</script>
+
+</body>
+</html>

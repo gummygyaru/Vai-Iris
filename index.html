@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Vai & Iris Games ✧ Dress-Up Paradise</title>
+
+  <!-- META -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Vai & Iris Games – Cute anime dress-up games made by weebs, for weebs!" />
+
+  <!-- FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=DotGothic16&display=swap" rel="stylesheet">
+
+  <!-- STYLE -->
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(180deg, #ffe6f2, #e6f0ff);
+      font-family: "Comic Neue", cursive;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: #ff99cc;
+      border-bottom: 4px solid #ff66aa;
+      padding: 10px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-family: "DotGothic16", monospace;
+      color: #fff;
+      text-shadow: 2px 2px #ff3399;
+    }
+
+    header p {
+      margin: 4px 0 0;
+      font-size: 0.9rem;
+      color: #fff;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .game-window {
+      background: #fff;
+      border: 5px double #ff99cc;
+      box-shadow: 0 0 15px rgba(255, 153, 204, 0.6);
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    .game-window h2 {
+      margin-top: 0;
+      color: #ff3399;
+    }
+
+    .dressup-placeholder {
+      height: 300px;
+      background: repeating-linear-gradient(
+        45deg,
+        #ffe6f2,
+        #ffe6f2 10px,
+        #fff 10px,
+        #fff 20px
+      );
+      border: 2px dashed #ff99cc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      color: #aa6699;
+    }
+
+    .sidebar {
+      background: #f0f6ff;
+      border: 2px solid #99bbff;
+      padding: 10px;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.75rem;
+      padding: 10px;
+      color: #666;
+    }
+
+    /* PASSWORD GATE */
+    .secret {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .secret input {
+      padding: 6px;
+      font-family: monospace;
+    }
+
+    .secret button {
+      padding: 6px 10px;
+      background: #ff99cc;
+      border: none;
+      cursor: pointer;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>✧ Vai & Iris Games ✧</h1>
+    <p>cute dress-up games made with love by Vivian ♡</p>
+  </header>
+
+  <main>
+    <div class="game-window">
+      <h2>Dress-Up Dream ✨</h2>
+      <div class="dressup-placeholder">
+        Character loading... ♡
+      </div>
+      <p>
+        Mix and match outfits, hairstyles, eyes, and accessories!
+        New items added all the time ★彡
+      </p>
+    </div>
+
+    <div class="sidebar">
+      <strong>Updates:</strong>
+      <ul>
+        <li>★ New eye styles added!</li>
+        <li>★ Music player update coming soon</li>
+        <li>★ Iris says hi!</li>
+      </ul>
+    </div>
+
+    <!-- ARG PASSWORD ENTRY -->
+    <div class="secret">
+      <p style="font-size:0.8rem;color:#999;">
+        Have a code?
+      </p>
+      <input type="password" id="passInput" placeholder="enter password" />
+      <button onclick="checkPassword()">OK</button>
+      <p id="errorMsg" class="hidden" style="color:red;">wrong password</p>
+    </div>
+  </main>
+
+  <footer>
+    © 2006–2007 Vai & Iris Games<br />
+    made by Vivian (17) · USA<br />
+    <span style="font-size:0.6rem;">
+      this site is best viewed at 1024x768 ✧
+    </span>
+  </footer>
+
+  <!-- AUDIO (placeholder for later stego use) -->
+  <!--
+    Future idea:
+    <audio src="bgm.mp3" autoplay loop></audio>
+    bgm.mp3 → spectrogram → warped JPEG → QR → password
+  -->
+
+  <script>
+    function checkPassword() {
+      const input = document.getElementById("passInput").value;
+      const error = document.getElementById("errorMsg");
+
+      // TEMP password for testing
+      if (input === "IRIS_SEES_YOU") {
+        window.location.href = "alt.html"; // second site
+      } else {
+        error.classList.remove("hidden");
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dress-Up</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+  <h3>Dress-Up</h3>
+
+  <!-- CHARACTER STAGE -->
+  <div id="dressup-stage">
+    <img id="base" src="assets/base/body.png" alt="base">
+
+    <img id="eyes" src="assets/eyes/eyes1.png" alt="eyes">
+    <img id="mouth" src="assets/mouth/mouth1.png" alt="mouth">
+    <img id="hair" src="assets/hair/hair1.png" alt="hair">
+    <img id="outfit" src="assets/outfits/outfit1.png" alt="outfit">
+  </div>
+
+  <!-- CONTROLS -->
+  <div id="controls">
+    <p>Eyes</p>
+    <button onclick="setPart('eyes', 1)">1</button>
+    <button onclick="setPart('eyes', 2)">2</button>
+    <button onclick="setPart('eyes', 3)">3</button>
+
+    <p>Mouth</p>
+    <button onclick="setPart('mouth', 1)">1</button>
+    <button onclick="setPart('mouth', 2)">2</button>
+
+    <p>Hair</p>
+    <button onclick="setPart('hair', 1)">1</button>
+    <button onclick="setPart('hair', 2)">2</button>
+
+    <p>Outfit</p>
+    <button onclick="setPart('outfit', 1)">1</button>
+    <button onclick="setPart('outfit', 2)">2</button>
+  </div>
+
+  <script>
+    function setPart(part, number) {
+      document.getElementById(part).src =
+        `assets/${part}/${part}${number}.png`;
+    }
+  </script>
+
+</body>
+</html>

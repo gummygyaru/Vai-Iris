@@ -1,0 +1,80 @@
+/* =========================
+   TERMINAL — INTERNAL ONLY
+   ========================= */
+
+body {
+  margin: 0;
+  padding: 20px;
+  background-color: #050505;
+  color: #00e676;
+  font-family: "Courier New", Courier, monospace;
+}
+
+h1 {
+  font-size: 1.2em;
+  margin: 0 0 10px 0;
+  color: #00ff88;
+}
+
+p {
+  font-size: 0.85em;
+  margin: 4px 0;
+  color: #00c96a;
+}
+
+/* INPUT */
+textarea {
+  width: 100%;
+  background-color: #000;
+  color: #00ff88;
+  border: 1px solid #222;
+  padding: 8px;
+  font-size: 0.9em;
+  resize: none;
+}
+
+textarea::placeholder {
+  color: #004422;
+}
+
+/* BUTTON */
+button {
+  margin-top: 8px;
+  background-color: #000;
+  color: #00ff88;
+  border: 1px solid #333;
+  padding: 6px 12px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #001a0d;
+}
+
+/* OUTPUT */
+pre {
+  margin-top: 12px;
+  padding: 10px;
+  background-color: #000;
+  border: 1px solid #222;
+  min-height: 80px;
+  font-size: 0.85em;
+  color: #00ff88;
+  white-space: pre-wrap;
+}
+
+/* SUBTLE DECAY */
+pre::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background: linear-gradient(to right, transparent, #003d22, transparent);
+  margin-top: 10px;
+}
+
+/* DISCOURAGE COMFORT */
+::selection {
+  background: #003d22;
+  color: #00ff88;
+}

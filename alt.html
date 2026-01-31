@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>V&I Games – Inventory System</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>V&I Games</h1>
+    <p>internal inventory interface</p>
+  </header>
+
+  <!-- WARNING / FLAVOR TEXT -->
+  <section>
+    <p>
+      welcome back, vivian.
+    </p>
+    <p>
+      all transactions logged automatically.
+    </p>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <main>
+
+    <!-- CATALOG SECTION -->
+    <section id="catalog">
+      <h2>Dress-Up Inventory</h2>
+      <p>
+        Select components to customize your model.
+      </p>
+
+      <!-- EXTERNAL FEATURES -->
+      <h3>External Features</h3>
+      <ul>
+        <li>Eyes – brown / blue / green / hazel</li>
+        <li>Hands – small / medium / large</li>
+        <li>Mouth – neutral / smile / frown</li>
+        <li>Nose – straight / curved</li>
+        <li>Ears – rounded / pointed</li>
+      </ul>
+
+      <!-- INTERNAL COMPONENTS -->
+      <h3>Internal Components</h3>
+      <ul>
+        <li>Heart – A type</li>
+        <li>Lungs – standard pair</li>
+        <li>Kidney – left</li>
+        <li>Kidney – right</li>
+        <li>Liver – partial</li>
+      </ul>
+
+      <p>
+        availability may vary.
+      </p>
+    </section>
+
+    <!-- TRANSACTION NOTES -->
+    <section id="notes">
+      <h2>Notes</h2>
+      <p>
+        cosmetic terminology maintained for user comfort.
+      </p>
+      <p>
+        do not correct customers.
+      </p>
+    </section>
+
+    <!-- TERMINAL SECTION -->
+    <section id="terminal">
+      <h2>Input Terminal</h2>
+
+      <p>
+        enter findings below.
+      </p>
+
+      <textarea id="terminalInput" rows="6" cols="60" placeholder=">"></textarea>
+      <br>
+      <button onclick="submitTerminal()">submit</button>
+
+      <pre id="terminalOutput"></pre>
+    </section>
+
+    <!-- EMAIL ARCHIVE TEASER -->
+    <section id="email-archive">
+      <h2>Email Archive</h2>
+      <p>
+        access restricted.
+      </p>
+      <p>
+        additional credentials required.
+      </p>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>
+      system version 1.9<br>
+      last sync: unknown
+    </p>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    function submitTerminal() {
+      const input = document.getElementById("terminalInput").value.trim();
+      const output = document.getElementById("terminalOutput");
+
+      if (input === "") {
+        output.textContent = "no input detected.";
+        return;
+      }
+
+      if (input.toLowerCase() === "vai") {
+        output.textContent = "vai status: offline.";
+      } else if (input.toLowerCase() === "iris") {
+        output.textContent = "iris status: active.";
+      } else if (input.toLowerCase() === "vivian") {
+        output.textContent = "user privileges confirmed.";
+      } else {
+        output.textContent = "input logged.";
+      }
+    }
+  </script>
+
+</body>
+</html>

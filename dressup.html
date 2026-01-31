@@ -2,50 +2,57 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Dress-Up</title>
-
+  <title>Dress-Up Game</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="dressup.css">
 </head>
 <body>
 
-  <h3>Dress-Up</h3>
+  <div id="game-container">
 
-  <!-- CHARACTER STAGE -->
-  <div id="dressup-stage">
-    <img id="base" src="assets/base/body.png" alt="base">
+    <!-- CHARACTER PREVIEW -->
+    <div id="preview">
+      <img id="body" src="assets/base/body.png" alt="body">
+      <img id="hair" src="assets/hair/hair1.png" alt="hair">
+      <img id="eyes" src="assets/eyes/eyes1.png" alt="eyes">
+      <img id="mouth" src="assets/mouth/mouth1.png" alt="mouth">
+      <img id="outfit" src="assets/outfits/outfit1.png" alt="outfit">
+      <img id="accessory" src="" alt="accessory">
+    </div>
 
-    <img id="eyes" src="assets/eyes/eyes1.png" alt="eyes">
-    <img id="mouth" src="assets/mouth/mouth1.png" alt="mouth">
-    <img id="hair" src="assets/hair/hair1.png" alt="hair">
-    <img id="outfit" src="assets/outfits/outfit1.png" alt="outfit">
+    <!-- CONTROLS -->
+    <div id="controls">
+
+      <div class="category" data-cat="hair">
+        <h3>Hair</h3>
+        <div class="items"></div>
+      </div>
+
+      <div class="category" data-cat="eyes">
+        <h3>Eyes</h3>
+        <div class="items"></div>
+      </div>
+
+      <div class="category" data-cat="mouth">
+        <h3>Mouth</h3>
+        <div class="items"></div>
+      </div>
+
+      <div class="category" data-cat="outfits">
+        <h3>Outfits</h3>
+        <div class="items"></div>
+      </div>
+
+      <div class="category" data-cat="accessory">
+        <h3>Accessories</h3>
+        <div class="items"></div>
+      </div>
+
+      <button onclick="resetLook()">Reset</button>
+
+    </div>
   </div>
 
-  <!-- CONTROLS -->
-  <div id="controls">
-    <p>Eyes</p>
-    <button onclick="setPart('eyes', 1)">1</button>
-    <button onclick="setPart('eyes', 2)">2</button>
-    <button onclick="setPart('eyes', 3)">3</button>
-
-    <p>Mouth</p>
-    <button onclick="setPart('mouth', 1)">1</button>
-    <button onclick="setPart('mouth', 2)">2</button>
-
-    <p>Hair</p>
-    <button onclick="setPart('hair', 1)">1</button>
-    <button onclick="setPart('hair', 2)">2</button>
-
-    <p>Outfit</p>
-    <button onclick="setPart('outfit', 1)">1</button>
-    <button onclick="setPart('outfit', 2)">2</button>
-  </div>
-
-  <script>
-    function setPart(part, number) {
-      document.getElementById(part).src =
-        `assets/${part}/${part}${number}.png`;
-    }
-  </script>
-
+<script src="dressup.js"></script>
 </body>
 </html>

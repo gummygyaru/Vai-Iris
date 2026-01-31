@@ -1,0 +1,216 @@
+/* =========================
+   GLOBAL RESET / BASE
+   ========================= */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fff6fb;
+  color: #222;
+}
+
+h1, h2, h3 {
+  font-weight: normal;
+}
+
+p, li {
+  line-height: 1.4;
+}
+
+a {
+  color: #ff4fa3;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   LAYOUT
+   ========================= */
+
+header, footer {
+  background-color: #ffd6ea;
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #ff9ecf;
+}
+
+footer {
+  border-top: 1px solid #ff9ecf;
+  border-bottom: none;
+  font-size: 0.8em;
+}
+
+main {
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+section, aside {
+  margin-bottom: 25px;
+  padding: 15px;
+  border: 1px solid #ffc2df;
+  background-color: #ffffff;
+}
+
+/* =========================
+   GAME / PUBLIC SITE
+   ========================= */
+
+#character-area {
+  border: 1px dashed #ff9ecf;
+  padding: 20px;
+  text-align: center;
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+
+#controls {
+  font-size: 0.9em;
+  color: #666;
+}
+
+/* =========================
+   PASSWORD / ADMIN PROMPTS
+   ========================= */
+
+input, textarea {
+  background-color: #fff;
+  border: 1px solid #aaa;
+  padding: 6px;
+  font-family: monospace;
+  font-size: 0.9em;
+}
+
+button {
+  padding: 6px 12px;
+  font-size: 0.9em;
+  cursor: pointer;
+  border: 1px solid #888;
+  background-color: #f0f0f0;
+}
+
+button:hover {
+  background-color: #e0e0e0;
+}
+
+/* =========================
+   404 PAGE
+   ========================= */
+
+body:has(h1:contains("404")) {
+  background-color: #fff;
+}
+
+/* =========================
+   ALT / INVENTORY SITE
+   ========================= */
+
+#catalog h3 {
+  margin-top: 20px;
+  color: #333;
+}
+
+#catalog ul {
+  list-style-type: square;
+}
+
+#notes {
+  background-color: #f7f7f7;
+  border-color: #bbb;
+}
+
+/* =========================
+   TERMINAL
+   ========================= */
+
+#terminal,
+textarea#input {
+  background-color: #000;
+  color: #00ff88;
+  border-color: #333;
+}
+
+#terminal h2,
+#terminal p {
+  color: #00ff88;
+}
+
+#terminal textarea {
+  width: 100%;
+  background-color: #000;
+  color: #00ff88;
+}
+
+#terminal pre {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #000;
+  border: 1px solid #333;
+  min-height: 60px;
+}
+
+/* =========================
+   LOGIN / DMs
+   ========================= */
+
+body:has(title:contains("Login")) {
+  background-color: #fdfdfd;
+}
+
+body:has(title:contains("Messages")) {
+  background-color: #fff;
+}
+
+body:has(title:contains("Messages")) p {
+  border-bottom: 1px solid #eee;
+  padding: 5px 0;
+}
+
+/* =========================
+   DEV LOGS
+   ========================= */
+
+h2 {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 4px;
+}
+
+body:has(title:contains("Dev Logs")) {
+  background-color: #fafafa;
+}
+
+/* =========================
+   HIDDEN / ARG TEXT
+   ========================= */
+
+.hidden-text {
+  color: transparent;
+  font-size: 0;
+}
+
+.hidden-text::selection {
+  color: #ff0000;
+  background: #000;
+}
+
+/* =========================
+   UNEASE DETAILS
+   ========================= */
+
+/* Slightly uncomfortable line spacing on system pages */
+#terminal p,
+#catalog p,
+#notes p {
+  line-height: 1.2;
+}
+
+/* Remove friendly colors when in admin contexts */
+body:has(#terminal),
+body:has(#catalog) {
+  background-color: #f3f3f3;
+}

@@ -2,17 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Dress-Up Game</title>
+  <title>Dress‑Up Game</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="dressup.css">
 </head>
 <body>
 
-  <div id="game-container">
+  <div id="game">
 
-    <!-- CHARACTER PREVIEW -->
-    <div id="preview">
-      <img id="body" src="assets/base/body.png" alt="body">
+    <!-- DISPLAY CANVAS -->
+    <div id="avatar">
+      <img id="body" src="assets/base/body.png" alt="base">
       <img id="hair" src="assets/hair/hair1.png" alt="hair">
       <img id="eyes" src="assets/eyes/eyes1.png" alt="eyes">
       <img id="mouth" src="assets/mouth/mouth1.png" alt="mouth">
@@ -20,39 +20,39 @@
       <img id="accessory" src="" alt="accessory">
     </div>
 
-    <!-- CONTROLS -->
+    <!-- CONTROLS PANEL -->
     <div id="controls">
 
-      <div class="category" data-cat="hair">
+      <div class="category" data-category="hair">
         <h3>Hair</h3>
         <div class="items"></div>
       </div>
 
-      <div class="category" data-cat="eyes">
+      <div class="category" data-category="eyes">
         <h3>Eyes</h3>
         <div class="items"></div>
       </div>
 
-      <div class="category" data-cat="mouth">
+      <div class="category" data-category="mouth">
         <h3>Mouth</h3>
         <div class="items"></div>
       </div>
 
-      <div class="category" data-cat="outfits">
+      <div class="category" data-category="outfit">
         <h3>Outfits</h3>
         <div class="items"></div>
       </div>
 
-      <div class="category" data-cat="accessory">
+      <div class="category" data-category="accessory">
         <h3>Accessories</h3>
         <div class="items"></div>
       </div>
 
-      <button onclick="resetLook()">Reset</button>
+      <button onclick="resetOutfit()">Reset</button>
 
     </div>
   </div>
 
-<script src="dressup.js"></script>
+  <script src="dressup.js"></script>
 </body>
 </html>

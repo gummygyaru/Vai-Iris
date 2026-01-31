@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Login</title>
+</head>
+<body>
+
+<h1>V&I Admin Login</h1>
+
+<input id="user" placeholder="username"><br>
+<input id="pass" type="password" placeholder="password"><br>
+<button onclick="login()">login</button>
+
+<p id="msg"></p>
+
+<script>
+function login() {
+  const u = document.getElementById("user").value;
+  const p = document.getElementById("pass").value;
+
+  if (u === "Vivian" && p === "Lies") {
+    window.location.href = "dm.html";
+  } else {
+    document.getElementById("msg").textContent = "invalid credentials";
+  }
+}
+</script>
+
+</body>
+</html>
